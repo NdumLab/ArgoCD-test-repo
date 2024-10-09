@@ -14,7 +14,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: my-app
-        image: tomchriz/spring-boot:latest  # Replace with your DockerHub repo
-        ports:
-        - containerPort: 8080
+        - name: my-app
+          image: tomchriz/spring-boot:latest  # Your DockerHub image
+          ports:
+            - containerPort: 8080

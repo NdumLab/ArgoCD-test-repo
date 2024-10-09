@@ -5,7 +5,3 @@ metadata:
   namespace: argocd
 spec:
   interval: 5m  # Check for updates every 5 minutes
-  images:
-    - name: tomchriz/spring-boot  # Your DockerHub image
-      path: spec.template.spec.containers[0].image
-###      pullSecret: dockerhub-secret  # Use if repository is private
