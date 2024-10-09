@@ -1,19 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-app
+  name: my-app
   namespace: argocd
 spec:
-  project: default
   source:
-    repoURL: 'https://github.com/NdumLab/ArgoCD-test-repo.git'
+    repoURL: https://github.com/NdumLab/ArgoCD-test-repo  # Replace with your GitHub repo URL
+    path: .  # Path in the Git repo
     targetRevision: HEAD
-    path: .
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: default
+  project: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
