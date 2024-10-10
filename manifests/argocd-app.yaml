@@ -3,11 +3,14 @@ kind: Application
 metadata:
   name: my-app
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: my-app=tomchriz/spring-boot
+    argocd-image-updater.argoproj.io/my-app.update-strategy: latest
 spec:
   project: default
   source:
-    repoURL: https://github.com/NdumLab/ArgoCD-test-repo  # Your GitHub repo URL
-    path: manifests  # Path in the Git repo
+    repoURL: https://github.com/NdumLab/ArgoCD-test-repo
+    path: manifests
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc

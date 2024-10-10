@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: tomchriz/spring-boot:latest  # Your DockerHub image
+          image: tomchriz/spring-boot:v04  # Corrected to the actual tag on DockerHub
           ports:
             - containerPort: 8080
+ 
