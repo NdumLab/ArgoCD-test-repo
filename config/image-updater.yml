@@ -1,7 +1,0 @@
-apiVersion: argoproj-labs/argocd-image-updater/v1alpha1
-kind: ArgoCDImageUpdater
-metadata:
-  name: image-updater
-  namespace: argocd
-spec:
-  interval: 5m  # Check for updates every 5 minutes
